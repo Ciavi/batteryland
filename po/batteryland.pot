@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the batteryland package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: batteryland\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-04 20:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: app.vala:104 app.vala:132
+msgid "BatteryLand"
+msgstr ""
+
+#: app.vala:138
+msgid "Created in Vala and GTK+ by Ciavi"
+msgstr ""
+
+#: app.vala:153
+msgid "GitHub"
+msgstr ""
+
+#: app.vala:160 app.vala:190
+msgid "Quit"
+msgstr ""
+
+#: app.vala:187
+msgid "About"
+msgstr ""
+
+#: upower.vala:45 upower.vala:82 upower.vala:115
+msgid "Unknown"
+msgstr ""
+
+#: upower.vala:47
+msgid "Line Power"
+msgstr ""
+
+#: upower.vala:49
+msgid "Battery"
+msgstr ""
+
+#: upower.vala:51
+msgid "UPS"
+msgstr ""
+
+#: upower.vala:53
+msgid "Monitor"
+msgstr ""
+
+#: upower.vala:55
+msgid "Mouse"
+msgstr ""
+
+#: upower.vala:57
+msgid "Keyboard"
+msgstr ""
+
+#: upower.vala:59
+msgid "PDA"
+msgstr ""
+
+#: upower.vala:61
+msgid "Phone"
+msgstr ""
+
+#: upower.vala:84
+msgid "Charging"
+msgstr ""
+
+#: upower.vala:86
+msgid "Discharging"
+msgstr ""
+
+#: upower.vala:88
+msgid "Empty"
+msgstr ""
+
+#: upower.vala:90
+msgid "Charged"
+msgstr ""
+
+#: upower.vala:92
+msgid "Pending Charge"
+msgstr ""
+
+#: upower.vala:94
+msgid "Pending Discharge"
+msgstr ""
+
+#: upower.vala:117
+msgid "Li-Ion"
+msgstr ""
+
+#: upower.vala:119
+msgid "Li-Pol"
+msgstr ""
+
+#: upower.vala:121
+msgid "Li-Phos"
+msgstr ""
+
+#: upower.vala:123
+msgid "Acid"
+msgstr ""
+
+#: upower.vala:125
+msgid "Ni-Cd"
+msgstr ""
+
+#: upower.vala:127
+msgid "Ni-MH"
+msgstr ""

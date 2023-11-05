@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 256 256" version="1.1" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1.125,0,56)">
+        <path id="batt_outer" d="M256,16C256,7.169 247.934,0 238,0L18,0C8.066,0 0,7.169 0,16L0,112C0,120.831 8.066,128 18,128L238,128C247.934,128 256,120.831 256,112L256,16Z" style="fill:white;fill-opacity:0.35;" />
+        <clipPath id="_clip1">
+            <path d="M256,16C256,7.169 247.934,0 238,0L18,0C8.066,0 0,7.169 0,16L0,112C0,120.831 8.066,128 18,128L238,128C247.934,128 256,120.831 256,112L256,16Z" />
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(0.921875,0,0,0.861111,10,8.88889)">
+                <rect id="batt_inner" x="0" y="0" width="256.0" height="128" style="fill:white;" />
+            </g>
+        </g>
+        <path id="border" d="M256,16C256,7.169 247.934,0 238,0L18,0C8.066,0 0,7.169 0,16L0,112C0,120.831 8.066,128 18,128L238,128C247.934,128 256,120.831 256,112L256,16ZM246,16L246,112C246,115.925 242.415,119.111 238,119.111C238,119.111 18,119.111 18,119.111C13.585,119.111 10,115.925 10,112L10,16C10,12.075 13.585,8.889 18,8.889C18,8.889 238,8.889 238,8.889C242.415,8.889 246,12.075 246,16Z" style="fill:#8B8B8B;" />
+    </g>
+</svg>
