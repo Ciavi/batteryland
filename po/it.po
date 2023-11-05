@@ -1,21 +1,21 @@
-#: app.vala:104 app.vala:132
+#: app.vala:109 app.vala:151
 #, fuzzy
 msgid "BatteryLand"
 msgstr "BatteryLand"
 
-#: app.vala:138
+#: app.vala:154
 msgid "Yet another battery icon for your system tray"
 msgstr "Un'altra icona di stato della batteria per la tua tray di sistema"
 
-#: app.vala:153
+#: app.vala:178
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app.vala:160 app.vala:190
+#: app.vala:185 app.vala:220
 msgid "Quit"
 msgstr "Esci"
 
-#: app.vala:187
+#: app.vala:217
 msgid "About"
 msgstr "Riguardo a..."
 
