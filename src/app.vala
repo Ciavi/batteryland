@@ -128,6 +128,7 @@ namespace BatteryLand {
             var top_container = new Grid();
             top_container.set_orientation(Orientation.VERTICAL);
             top_container.set_row_spacing(12);
+            top_container.set_valign(Align.FILL);
             top_container.set_halign(Align.CENTER);
 
             var current_path = Environment.get_current_dir();
@@ -151,11 +152,13 @@ namespace BatteryLand {
             title.set_attributes(title_attributes);
 
             var description = new Label(_("Yet another battery icon for your system tray"));
+            var version = new Label("v. %s".printf(""));
 
             var scroll_container = new ScrolledWindow(null, null);
             scroll_container.set_valign(Align.FILL);
 
             var changelog = new TextView();
+            changelog.set_valign(Align.FILL);
             changelog.buffer.set_text("");
 
             scroll_container.add(changelog);
@@ -163,7 +166,8 @@ namespace BatteryLand {
             top_container.attach(logo, 0, 1);
             top_container.attach_next_to(title, logo, PositionType.BOTTOM);
             top_container.attach_next_to(description, title, PositionType.BOTTOM);
-            top_container.attach_next_to(description, scroll_container, PositionType.BOTTOM);
+            top_container.attach_next_to(version, description, PositionType.BOTTOM);
+            top_container.attach_next_to(scroll_container, version, PositionType.BOTTOM);
 
             var bottom_container = new Grid();
             bottom_container.set_orientation(Orientation.HORIZONTAL);
