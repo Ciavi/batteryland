@@ -1,28 +1,3 @@
-#: app.vala:110 app.vala:152
-#, fuzzy
-msgid "BatteryLand"
-msgstr "BatteryLand"
-
-#: app.vala:155
-msgid "Yet another battery icon for your system tray"
-msgstr "Un'altra icona di stato della batteria per la tua tray di sistema"
-
-#: app.vala:163
-msgid "Couldn't fetch changelog..."
-msgstr "Non è stato possibile recuperare il changelog..."
-
-#: app.vala:186
-msgid "GitHub"
-msgstr "GitHub"
-
-#: app.vala:193 app.vala:228
-msgid "Quit"
-msgstr "Esci"
-
-#: app.vala:225
-msgid "About"
-msgstr "Riguardo a..."
-
 #: upower.vala:45 upower.vala:82 upower.vala:115
 msgid "Unknown"
 msgstr "Sconosciuto"
@@ -106,3 +81,22 @@ msgstr "Nickel-Cadmio"
 #: upower.vala:127
 msgid "Ni-MH"
 msgstr "Nichel-MetalloIdruro"
+
+#, fuzzy
+#~ msgid "BatteryLand"
+#~ msgstr "BatteryLand"
+
+#~ msgid "Yet another battery icon for your system tray"
+#~ msgstr "Un'altra icona di stato della batteria per la tua tray di sistema"
+
+#~ msgid "Couldn't fetch changelog..."
+#~ msgstr "Non  stato possibile recuperare il changelog..."
+
+#~ msgid "GitHub"
+#~ msgstr "GitHub"
+
+#~ msgid "Quit"
+#~ msgstr "Esci"
+
+#~ msgid "About"
+#~ msgstr "Riguardo a..."
