@@ -41,6 +41,8 @@ namespace BatteryLand {
             menu.show_all();
             indicator.set_menu(menu);
 
+            battery.dbus_properties_changed.connect(update);
+
             return this;
         }
 

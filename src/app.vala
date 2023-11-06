@@ -73,7 +73,6 @@ namespace BatteryLand {
                 foreach (var device in devices) {
                     if (device.to_string().contains("BAT")) {
                         battery = new Battery(device.to_string());
-                        battery.dbus_properties_changed.connect(tray_indicator.update);
                         break;
                     }
                 }
