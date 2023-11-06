@@ -118,11 +118,11 @@ namespace BatteryLand {
             var fg_github_normal = Gdk.RGBA();
             fg_github_normal.parse("#fafafa");
 
-            var main_container = new Box(Orientation.VERTICAL, 12);
-            main_container.set_margin_top(12);
-            main_container.set_margin_bottom(12);
-            main_container.set_margin_start(12);
-            main_container.set_margin_end(12);
+            var main_container = new Box(Orientation.VERTICAL, 24);
+            main_container.set_margin_top(24);
+            main_container.set_margin_bottom(24);
+            main_container.set_margin_start(24);
+            main_container.set_margin_end(24);
             main_container.set_halign(Align.FILL);
             main_container.set_valign(Align.FILL);
             main_container.set_hexpand(true);
@@ -183,7 +183,7 @@ namespace BatteryLand {
 
             var bottom_container = new Grid();
             bottom_container.set_orientation(Orientation.HORIZONTAL);
-            bottom_container.set_column_spacing(12);
+            bottom_container.set_column_spacing(24);
             bottom_container.set_column_homogeneous(true);
             bottom_container.set_halign(Align.FILL);
 
