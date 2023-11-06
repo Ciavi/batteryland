@@ -1,3 +1,9 @@
+v0.2a
+Some stuff happened:
+- Fixed about window's layout
+- Added libsoup dependency (v2.4)
+- Updated translations
+
 v0.1a
 Initial commit. Not production ready:
 - Basic functionalities (tray)
