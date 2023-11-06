@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: batteryland\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-05 19:17+0100\n"
+"POT-Creation-Date: 2023-11-05 20:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,27 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: app.vala:109 app.vala:151
+#: app.vala:110 app.vala:152
 msgid "BatteryLand"
 msgstr ""
 
-#: app.vala:154
+#: app.vala:155
 msgid "Yet another battery icon for your system tray"
 msgstr ""
 
-#: app.vala:178
+#: app.vala:163
+msgid "Couldn't fetch..."
+msgstr ""
+
+#: app.vala:186
 msgid "GitHub"
 msgstr ""
 
-#: app.vala:185 app.vala:220
+#: app.vala:193 app.vala:228
 msgid "Quit"
 msgstr ""
 
-#: app.vala:217
+#: app.vala:225
 msgid "About"
 msgstr ""
 
