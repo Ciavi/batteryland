@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 sources = [
-    'app.vala', 'upower.vala', version_file
+    'app.vala', 'upower.vala', 'about_window.vala', 'indicator.vala', version_file
 ]
 
 executable(meson.project_name(), sources, dependencies: dependencies)
