@@ -1,6 +1,7 @@
 using AppIndicator;
 using GLib;
 using Gtk;
+using Soup;
 using UPower;
 
 namespace BatteryLand {
@@ -123,7 +124,9 @@ namespace BatteryLand {
             main_container.set_margin_start(12);
             main_container.set_margin_end(12);
             main_container.set_halign(Align.FILL);
-            main_container.set_valign(Align.END);
+            main_container.set_valign(Align.FILL);
+            main_container.set_hexpand(true);
+            main_container.set_vexpand(true);
 
             var top_container = new Grid();
             top_container.set_orientation(Orientation.VERTICAL);
@@ -152,14 +155,23 @@ namespace BatteryLand {
             title.set_attributes(title_attributes);
 
             var description = new Label(_("Yet another battery icon for your system tray"));
-            var version = new Label("v. %s".printf(""));
+            var version = new Label(VERSION);
 
             var scroll_container = new ScrolledWindow(null, null);
             scroll_container.set_valign(Align.FILL);
+            scroll_container.set_vexpand(true);
+
+            var http_session = new Session();
+            var http_message = new Message("GET", "https://raw.githubusercontent.com/Ciavi/batteryland/master/changelog");
+            var changelog_text = _("Couldn't fetch changelog...");
+
+            http_session.send_message(http_message);
+            changelog_text = (string)http_message.response_body.data;
 
             var changelog = new TextView();
+            changelog.set_editable(false);
             changelog.set_valign(Align.FILL);
-            changelog.buffer.set_text("");
+            changelog.buffer.set_text(changelog_text);
 
             scroll_container.add(changelog);
 
@@ -188,8 +200,8 @@ namespace BatteryLand {
             bottom_container.attach(button_github, 1, 0);
             bottom_container.attach_next_to(button_quit, button_github, PositionType.RIGHT);
 
-            main_container.add(top_container);
-            main_container.add(bottom_container);
+            main_container.pack_start(top_container, true, true, 0);
+            main_container.pack_start(bottom_container, false, false, 0);
 
             window.add(main_container);
         }
