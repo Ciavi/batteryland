@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Check if Meson is installed
+if ! command -v meson &> /dev/null; then
+    echo "Meson is not installed. Please install Meson and try again."
+    exit 1
+fi
+
+# Check if Vala is installed
+if ! command -v valac &> /dev/null; then
+    echo "Vala is not installed. Please install Vala and try again."
+    exit 1
+fi
+
+# Set up directories
+PREFIX="/usr/local"
+BINDIR="${PREFIX}/bin"
+DATADIR="${PREFIX}/share"
+
+# Run Meson configure with install directories
+meson builddir --prefix="${PREFIX}" --bindir="${BINDIR}" --datadir="${DATADIR}" || exit 1
+
+# Print instructions for the user
+echo ""
+echo "Configure has been successful. Now run the following commands:"
+echo "cd builddir"
+echo "ninja"
+echo "ninja install (if you want to install the project)"
