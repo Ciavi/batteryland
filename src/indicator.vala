@@ -11,20 +11,10 @@ namespace BatteryLand {
 
         public TrayIndicator with_battery(Battery battery, WindowCaller call, AppQuitter quit) {
             this.battery = battery;
-            var battery_data = battery.device_data();
-            int status = 0;
-            if (battery_data.state == UPower.DeviceState.CHARGING) {
-                status = 1;
-            }
-            var icon_title = battery_data.state.to_string().concat(": ", battery_data.percentage.to_string(), "%");
-
-            var current_path = Environment.get_current_dir();
-            var icon_name = "resources/default/svg/b_%s_%s.svg".printf(status.to_string(), battery_data.percentage.to_string());
-            var icon_path = Path.build_filename(current_path, icon_name);
 
             indicator = new Indicator("it.lichtzeit.batteryland", "indicator-messages", IndicatorCategory.HARDWARE);
-            indicator.set_icon_full(icon_path, null);
-            indicator.set_title(icon_title);
+            indicator.set_icon_full(build_icon_path(), null);
+            indicator.set_title(build_icon_title());
             indicator.set_status(IndicatorStatus.ACTIVE);
 
             var menu = new Gtk.Menu();
@@ -47,19 +37,29 @@ namespace BatteryLand {
         }
 
         public void update() {
+            indicator.set_icon_full(build_icon_path(), null);
+            indicator.set_title(build_icon_title());
+        }
+
+        private string build_icon_path() {
             var battery_data = battery.device_data();
             int status = 0;
-            if (battery_data.state == UPower.DeviceState.CHARGING) {
-                status = 1;
-            }
-            var icon_title = battery_data.state.to_string().concat(": ", battery_data.percentage.to_string(), "%");
+
+            if (battery_data.state == UPower.DeviceState.CHARGING) status = 1;
 
             var current_path = Environment.get_current_dir();
             var icon_name = "resources/default/svg/b_%s_%s.svg".printf(status.to_string(), battery_data.percentage.to_string());
-            var icon_path = Path.build_filename(current_path, icon_name);
+            
+            return Path.build_filename(current_path, icon_name);
+        }
 
-            indicator.set_icon_full(icon_path, null);
-            indicator.set_title(icon_title);
+        private string build_icon_title() {
+            var battery_data = battery.device_data();
+            int status = 0;
+
+            if (battery_data.state == UPower.DeviceState.CHARGING) status = 1;
+
+            return battery_data.state.to_string().concat(": ", battery_data.percentage.to_string(), "%");
         }
     }
 }
