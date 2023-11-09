@@ -17,4 +17,4 @@ sources = [
     'app.vala', 'upower.vala', 'about_window.vala', 'indicator.vala', version_file
 ]
 
-executable(meson.project_name(), sources, dependencies: dependencies)
+executable('batteryland', sources, dependencies: dependencies, install: true, install_dir: bindir)
