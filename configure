@@ -19,7 +19,7 @@ PREFIX=${PREFIX:-/usr/local}
 read -p "Enter binary directory (default: ${PREFIX}/bin): " BINDIR
 BINDIR=${BINDIR:-${PREFIX}/bin}
 
-read -p "Enter data directory (default: ${PREFIX}/share): " DATADIR
+read -p "Enter data directory (default: ${PREFIX}/it.lichtzeit.batteryland/share): " DATADIR
 DATADIR=${DATADIR:-${PREFIX}/share/it.lichtzeit.batteryland}
 
 sudo mkdir $DATADIR
