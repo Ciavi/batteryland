@@ -33,9 +33,8 @@ namespace BatteryLand {
             top_container.set_valign(Align.FILL);
             top_container.set_halign(Align.CENTER);
 
-            var current_path = Environment.get_current_dir();
             var logo_name = "resources/default/svg/b_1_100.svg";
-            var logo_path = Path.build_filename(current_path, logo_name);
+            var logo_path = Path.build_filename(PREFIX, DATADIR, logo_name);
 
             var logo = new Image();
 

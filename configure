@@ -20,10 +20,13 @@ read -p "Enter binary directory (default: ${PREFIX}/bin): " BINDIR
 BINDIR=${BINDIR:-${PREFIX}/bin}
 
 read -p "Enter data directory (default: ${PREFIX}/share): " DATADIR
-DATADIR=${DATADIR:-${PREFIX}/share}
+DATADIR=${DATADIR:-${PREFIX}/share/it.lichtzeit.batteryland}
+
+sudo mkdir $DATADIR
+sudo chmod -R 755 $DATADIR
 
 # Run Meson configure with install directories
-meson builddir --prefix="${PREFIX}" --bindir="${BINDIR}" --datadir="${DATADIR}" || exit 1
+meson builddir --reconfigure --prefix="${PREFIX}" --bindir="${BINDIR}" --datadir="${DATADIR}" || exit 1
 
 # Print instructions for the user
 echo ""

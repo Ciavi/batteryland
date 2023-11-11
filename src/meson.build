@@ -1,7 +1,13 @@
-version_file = vcs_tag(
-    command: ['git', 'describe', '--tags'],
-    input: 'version.vala.in',
-    output: 'version.vala'
+utils_conf = configuration_data()
+utils_conf.set('VCS_TAG', meson.project_version())
+utils_conf.set('PREFIX', prefix)
+utils_conf.set('BINDIR', bindir)
+utils_conf.set('DATADIR', datadir)
+
+utils_file = configure_file(
+    input: 'utils.vala.in',
+    output: 'utils.vala',
+    configuration: utils_conf
 )
 
 dependencies = [
@@ -14,7 +20,7 @@ dependencies = [
 ]
 
 sources = [
-    'app.vala', 'upower.vala', 'about_window.vala', 'indicator.vala', version_file
+    'app.vala', 'upower.vala', 'about_window.vala', 'indicator.vala', utils_file
 ]
 
 executable('batteryland', sources, dependencies: dependencies, install: true, install_dir: bindir)

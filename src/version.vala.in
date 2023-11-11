@@ -1,3 +1,0 @@
-namespace BatteryLand {
-    const string VERSION = "@VCS_TAG@";
-}

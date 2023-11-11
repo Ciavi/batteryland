@@ -1,0 +1,6 @@
+namespace BatteryLand {
+    const string VERSION = "@VCS_TAG@";
+    const string PREFIX = "@PREFIX@";
+    const string BINDIR = "@BINDIR@";
+    const string DATADIR = "@DATADIR@";
+}

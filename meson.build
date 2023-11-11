@@ -7,7 +7,7 @@ prefix = get_option('prefix')
 bindir = get_option('bindir')
 datadir = get_option('datadir')
 
-install_data('resources', install_dir: datadir)
+install_subdir('resources', install_dir: datadir)
 
 subdir('po')
 subdir('src')

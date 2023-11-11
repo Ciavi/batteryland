@@ -47,10 +47,9 @@ namespace BatteryLand {
 
             if (battery_data.state == UPower.DeviceState.CHARGING) status = 1;
 
-            var current_path = Environment.get_current_dir();
             var icon_name = "resources/default/svg/b_%s_%s.svg".printf(status.to_string(), battery_data.percentage.to_string());
             
-            return Path.build_filename(current_path, icon_name);
+            return Path.build_filename(PREFIX, DATADIR, icon_name);
         }
 
         private string build_icon_title() {
