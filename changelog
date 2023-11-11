@@ -1,3 +1,8 @@
+v0.3a
+Almost there!
+- Prefix and install directories now customisable
+- Minor meson config issues
+
 v0.2a
 Some stuff happened:
 - Fixed about window's layout
