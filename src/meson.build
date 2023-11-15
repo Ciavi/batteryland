@@ -1,5 +1,6 @@
 utils_conf = configuration_data()
 utils_conf.set('VCS_TAG', meson.project_version())
+utils_conf.set('PACKAGE', meson.project_name())
 utils_conf.set('PREFIX', prefix)
 utils_conf.set('BINDIR', bindir)
 utils_conf.set('DATADIR', datadir)

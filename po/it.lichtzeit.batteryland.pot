@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: it.lichtzeit.batteryland\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-06 20:00+0100\n"
+"POT-Creation-Date: 2023-11-15 10:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,86 +17,110 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: upower.vala:45 upower.vala:82 upower.vala:115
+#: src/about_window.vala:9 src/about_window.vala:52
+msgid "BatteryLand"
+msgstr ""
+
+#: src/about_window.vala:55
+msgid "Yet another battery icon for your system tray"
+msgstr ""
+
+#: src/about_window.vala:64
+msgid "Couldn't fetch changelog..."
+msgstr ""
+
+#: src/about_window.vala:88
+msgid "GitHub"
+msgstr ""
+
+#: src/about_window.vala:95 src/indicator.vala:25
+msgid "Quit"
+msgstr ""
+
+#: src/indicator.vala:22
+msgid "About"
+msgstr ""
+
+#: src/upower.vala:45 src/upower.vala:82 src/upower.vala:115
 msgid "Unknown"
 msgstr ""
 
-#: upower.vala:47
+#: src/upower.vala:47
 msgid "Line Power"
 msgstr ""
 
-#: upower.vala:49
+#: src/upower.vala:49
 msgid "Battery"
 msgstr ""
 
-#: upower.vala:51
+#: src/upower.vala:51
 msgid "UPS"
 msgstr ""
 
-#: upower.vala:53
+#: src/upower.vala:53
 msgid "Monitor"
 msgstr ""
 
-#: upower.vala:55
+#: src/upower.vala:55
 msgid "Mouse"
 msgstr ""
 
-#: upower.vala:57
+#: src/upower.vala:57
 msgid "Keyboard"
 msgstr ""
 
-#: upower.vala:59
+#: src/upower.vala:59
 msgid "PDA"
 msgstr ""
 
-#: upower.vala:61
+#: src/upower.vala:61
 msgid "Phone"
 msgstr ""
 
-#: upower.vala:84
+#: src/upower.vala:84
 msgid "Charging"
 msgstr ""
 
-#: upower.vala:86
+#: src/upower.vala:86
 msgid "Discharging"
 msgstr ""
 
-#: upower.vala:88
+#: src/upower.vala:88
 msgid "Empty"
 msgstr ""
 
-#: upower.vala:90
+#: src/upower.vala:90
 msgid "Charged"
 msgstr ""
 
-#: upower.vala:92
+#: src/upower.vala:92
 msgid "Pending Charge"
 msgstr ""
 
-#: upower.vala:94
+#: src/upower.vala:94
 msgid "Pending Discharge"
 msgstr ""
 
-#: upower.vala:117
+#: src/upower.vala:117
 msgid "Li-Ion"
 msgstr ""
 
-#: upower.vala:119
+#: src/upower.vala:119
 msgid "Li-Pol"
 msgstr ""
 
-#: upower.vala:121
+#: src/upower.vala:121
 msgid "Li-Phos"
 msgstr ""
 
-#: upower.vala:123
+#: src/upower.vala:123
 msgid "Acid"
 msgstr ""
 
-#: upower.vala:125
+#: src/upower.vala:125
 msgid "Ni-Cd"
 msgstr ""
 
-#: upower.vala:127
+#: src/upower.vala:127
 msgid "Ni-MH"
 msgstr ""

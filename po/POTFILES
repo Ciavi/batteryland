@@ -1,2 +1,4 @@
-app.vala
-upower.vala
+src/about_window.vala
+src/app.vala
+src/indicator.vala
+src/upower.vala

@@ -84,6 +84,13 @@ namespace BatteryLand {
 }
 
 int main(string[] args) {
+    Intl.setlocale(LocaleCategory.ALL, "");
+    
+    var langpack_dir = Path.build_filename(BatteryLand.PREFIX, "share", "locale");
+    Intl.bindtextdomain(BatteryLand.PACKAGE, langpack_dir);
+    Intl.bind_textdomain_codeset(BatteryLand.PACKAGE, "UTF-8");
+    Intl.textdomain(BatteryLand.PACKAGE);
+
     var client = new BatteryLand.Client(args);
     return client.run();
 }
