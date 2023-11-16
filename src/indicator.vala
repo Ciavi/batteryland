@@ -13,7 +13,7 @@ namespace BatteryLand {
             this.battery = battery;
 
             indicator = new Indicator("it.lichtzeit.batteryland", "indicator-messages", IndicatorCategory.HARDWARE);
-            indicator.set_icon_full(build_icon_path(), null);
+            indicator.set_icon_full(build_icon_path(), "");
             indicator.set_title(build_icon_title());
             indicator.set_status(IndicatorStatus.ACTIVE);
 
@@ -37,7 +37,7 @@ namespace BatteryLand {
         }
 
         public void update() {
-            indicator.set_icon_full(build_icon_path(), null);
+            indicator.set_icon_full(build_icon_path(), "");
             indicator.set_title(build_icon_title());
         }
 
