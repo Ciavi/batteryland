@@ -1,5 +1,5 @@
 {
-    "C_Cpp.default.compileCommands": "builddir/compile_commands.json",
+    "C_Cpp.default.compileCommands": "/mnt/ext/code/projects/batteryland/builddir/compile_commands.json",
     "files.associations": {
         "*.in": "cpp"
     },

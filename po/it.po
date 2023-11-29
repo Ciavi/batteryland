@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -27,7 +27,7 @@ msgstr "Yet another battery icon for your system tray"
 
 #: src/about_window.vala:64
 msgid "Couldn't fetch changelog..."
-msgstr "Non e' stato possibile recuperare il changelog..."
+msgstr "Non è stato possibile recuperare il changelog..."
 
 #: src/about_window.vala:88
 msgid "GitHub"
@@ -55,7 +55,7 @@ msgstr "Batteria"
 
 #: src/upower.vala:51
 msgid "UPS"
-msgstr "Gruppo di Continuita'"
+msgstr "Gruppo di Continuità"
 
 #: src/upower.vala:53
 msgid "Monitor"
