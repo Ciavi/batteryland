@@ -63,13 +63,15 @@ namespace BatteryLand {
             var http_message = new Message("GET", "https://raw.githubusercontent.com/Ciavi/batteryland/master/changelog");
             var changelog_text = _("Couldn't fetch changelog...");
 
-            http_session.send_message(http_message);
-            changelog_text = (string)http_message.response_body.data;
-
             var changelog = new TextView();
             changelog.set_editable(false);
             changelog.set_valign(Align.FILL);
             changelog.buffer.set_text(changelog_text);
+
+            http_session.queue_message(http_message, (session, message) => {
+                changelog_text = (string)message.response_body.data;
+                changelog.buffer.set_text(changelog_text);
+            });
 
             scroll_container.add(changelog);
 
