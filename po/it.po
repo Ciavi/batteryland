@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: it.lichtzeit.batteryland\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-15 10:41+0100\n"
+"POT-Creation-Date: 2023-12-15 11:28+0100\n"
 "PO-Revision-Date: 2023-11-15 10:41+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -29,13 +29,17 @@ msgstr "Yet another battery icon for your system tray"
 msgid "Couldn't fetch changelog..."
 msgstr "Non è stato possibile recuperare il changelog..."
 
-#: src/about_window.vala:88
+#: src/about_window.vala:90
 msgid "GitHub"
 msgstr "GitHub"
 
-#: src/about_window.vala:95 src/indicator.vala:25
+#: src/about_window.vala:97 src/indicator.vala:25
 msgid "Quit"
 msgstr "Esci"
+
+#: src/app.vala:100
+msgid "Icon theme to be used"
+msgstr "Tema icone da utilizzare"
 
 #: src/indicator.vala:22
 msgid "About"

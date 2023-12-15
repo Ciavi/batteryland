@@ -4,4 +4,6 @@ namespace BatteryLand {
     const string PREFIX = "@PREFIX@";
     const string BINDIR = "@BINDIR@";
     const string DATADIR = "@DATADIR@";
+    
+    string THEME;
 }

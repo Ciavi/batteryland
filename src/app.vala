@@ -39,6 +39,10 @@ namespace BatteryLand {
         public Client(string[] args) {
             Gtk.init(ref args);
 
+            if(BatteryLand.THEME == "" || BatteryLand.THEME == null) {
+                BatteryLand.THEME = "default";
+            }
+
             build_battery();
             tray_indicator = new TrayIndicator().with_battery(battery, show_window, quit);
 
@@ -90,6 +94,21 @@ int main(string[] args) {
     Intl.bindtextdomain(BatteryLand.PACKAGE, langpack_dir);
     Intl.bind_textdomain_codeset(BatteryLand.PACKAGE, "UTF-8");
     Intl.textdomain(BatteryLand.PACKAGE);
+
+    var context = new OptionContext(BatteryLand.PACKAGE);
+    OptionEntry[] entries = {
+        { "theme", 't', OptionFlags.NONE, OptionArg.STRING, ref BatteryLand.THEME, _("Icon theme to be used"), null },
+        { null }
+    };
+
+    context.add_main_entries(entries, BatteryLand.PACKAGE);
+
+    try {
+        context.parse(ref args);
+    } catch (Error e) {
+        stderr.printf("%s\n", e.message);
+        return -1;
+    }
 
     var client = new BatteryLand.Client(args);
     return client.run();

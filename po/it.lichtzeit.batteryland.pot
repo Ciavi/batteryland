@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: it.lichtzeit.batteryland\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-15 10:52+0100\n"
+"POT-Creation-Date: 2023-12-15 11:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,12 +29,16 @@ msgstr ""
 msgid "Couldn't fetch changelog..."
 msgstr ""
 
-#: src/about_window.vala:88
+#: src/about_window.vala:90
 msgid "GitHub"
 msgstr ""
 
-#: src/about_window.vala:95 src/indicator.vala:25
+#: src/about_window.vala:97 src/indicator.vala:25
 msgid "Quit"
+msgstr ""
+
+#: src/app.vala:100
+msgid "Icon theme to be used"
 msgstr ""
 
 #: src/indicator.vala:22
