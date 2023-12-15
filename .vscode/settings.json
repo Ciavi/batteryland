@@ -1,7 +1,0 @@
-{
-    "C_Cpp.default.compileCommands": "/mnt/ext/code/projects/batteryland/builddir/compile_commands.json",
-    "files.associations": {
-        "*.in": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "disabled"
-}
