@@ -68,10 +68,10 @@ namespace BatteryLand {
         }
 
         private void open_tlp_ui() {
-            string[] args = {""};
+            string[] args = {"tlpui"};
             try {
                 int id;
-                Process.spawn_async("tlpui", args, null, SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out id);
+                Process.spawn_async(null, args, null, SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out id);
             } catch (Error e) {
                 stderr.printf("%s\n", e.message);
             }
