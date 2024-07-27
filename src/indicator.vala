@@ -28,6 +28,9 @@ namespace BatteryLand {
             var menu_quit = new Gtk.MenuItem.with_label(_("Quit"));
             menu_quit.activate.connect(() => quit());
 
+            if (is_tlp_installed)
+                menu.append(menu_tlpui);
+                
             menu.append(menu_about);
             menu.append(menu_quit);
 
