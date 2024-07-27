@@ -9,7 +9,7 @@ namespace BatteryLand {
         public Battery battery;
         public Indicator indicator;
 
-        public TrayIndicator with_battery(Battery battery, WindowCaller call, AppQuitter quit) {
+        public TrayIndicator with_battery(Battery battery, WindowCaller call, AppQuitter quit, bool is_tlp_installed) {
             this.battery = battery;
 
             indicator = new Indicator("it.lichtzeit.batteryland", "indicator-messages", IndicatorCategory.HARDWARE);
@@ -18,6 +18,9 @@ namespace BatteryLand {
             indicator.set_status(IndicatorStatus.ACTIVE);
 
             var menu = new Gtk.Menu();
+
+            var menu_tlpui = new Gtk.MenuItem.with_label(_("Open TLPUI"));
+            menu_tlpui.activate.connect(() => open_tlp_ui());
 
             var menu_about = new Gtk.MenuItem.with_label(_("About"));
             menu_about.activate.connect(() => call());
@@ -59,6 +62,15 @@ namespace BatteryLand {
             if (battery_data.state == UPower.DeviceState.CHARGING) status = 1;
 
             return battery_data.state.to_string().concat(": ", battery_data.percentage.to_string(), "%");
+        }
+
+        private void open_tlp_ui() {
+            try {
+                int id;
+                Process.spawn_async("tlpui", {}, null, SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out id);
+            } catch (Error e) {
+                stderr.printf("%s\n", e.message);
+            }
         }
     }
 }

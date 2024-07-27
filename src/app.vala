@@ -44,7 +44,7 @@ namespace BatteryLand {
             }
 
             build_battery();
-            tray_indicator = new TrayIndicator().with_battery(battery, show_window, quit);
+            tray_indicator = new TrayIndicator().with_battery(battery, show_window, quit, is_binary_installed("tlpui"));
 
             active = true;
         }
@@ -65,6 +65,19 @@ namespace BatteryLand {
 
         public void hide_window() {
             window.hide();
+        }
+
+        public bool is_binary_installed(string binary) {
+            string[] argv = {"which", binary};
+            string stdout, stderr;
+            int status;
+
+            try {
+                Process.spawn_sync(null, argv, null, SpawnFlags.SEARCH_PATH, null, out stdout, out stderr, out status);
+                return status == 0;
+            } catch (Error e) {
+                return false;
+            }
         }
 
         private void build_battery() {
